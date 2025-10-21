@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(255, 255, 255)">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="rgb(9, 10, 11)">
+  <title>OpenRouter</title>
+  <meta name="description" content="A router for LLMs and other AI models">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="canonical" href="https://openrouter.ai">
+  <meta property="og:title" content="OpenRouter">
+  <meta property="og:description" content="A router for LLMs and other AI models">
+  <meta property="og:url" content="https://openrouter.ai">
+  <meta property="og:site_name" content="OpenRouter">
+  <meta property="og:image" content="https://openrouter.ai/dynamic-og?pathname=default&title=OpenRouter&description=A+router+for+LLMs+and+other+AI+models">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@openrouterai">
+  <meta name="twitter:title" content="OpenRouter">
+  <meta name="twitter:description" content="A router for LLMs and other AI models">
+  <meta name="twitter:image" content="https://openrouter.ai/dynamic-og?pathname=default&title=OpenRouter&description=A+router+for+LLMs+and+other+AI+models">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" sizes="16x16">
+  <script>
+    ((a,b,c,d,e,f,g,h)=>{
+      let i=document.documentElement,j=["light","dark"];
+      function k(b){
+        var c;
+        (Array.isArray(a)?a:[a]).forEach(a=>{
+          let c="class"===a,d=c&&f?e.map(a=>f[a]||a):e;
+          c?(i.classList.remove(...d),i.classList.add(f&&f[b]?f[b]:b)):i.setAttribute(a,b)
+        }),c=b,h&&j.includes(c)&&(i.style.colorScheme=c)
+      }
+      if(d)k(d);
+      else try{
+        let a=localStorage.getItem(b)||c,
+        d=g&&"system"===a?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":a;
+        k(d)
+      }catch(a){}
+    })("class","theme","light",null,["light","dark"],null,true,true)
+  </script>
+</head>
+<body class="font-sans">
+  <main class="tabular-nums">
+    <!-- Navigation -->
+    <nav id="main-nav" class="sticky top-0 z-40 transition-all duration-150 bg-background mx-auto px-6 py-3.5 lg:py-6 max-w-screen-4xl">
+      <span style="position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal">
+        <a href="#skip" class="sr-only absolute left-0 top-0 bg-background text-primary focus:not-sr-only">Skip to content</a>
+      </span>
+      <div class="align-center relative flex flex-row justify-between text-sm md:text-base">
+        <div class="flex flex-1 items-center gap-4">
+          <a class="text-muted-foreground" href="/">
+            <button class="inline-flex items-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 hover:bg-accent hover:text-accent-foreground border border-transparent h-9 rounded-md px-3 w-auto justify-center text-accent-foreground">
+              <span data-state="closed" style="-webkit-touch-callout:none">
+                <span class="flex items-center gap-2 text-base transform cursor-pointer font-medium duration-100 ease-in-out fill-current stroke-current">
+                  <svg width="100%" height="100%" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="size-4" fill="currentColor" stroke="currentColor" aria-label="Logo">
+                    <g clip-path="url(#clip0_205_3)">
+                      <path d="M3 248.945C18 248.945 76 236 106 219C136 202 136 202 198 158C276.497 102.293 332 120.945 423 120.945" stroke-width="90"></path>
+                      <path d="M511 121.5L357.25 210.268L357.25 32.7324L511 121.5Z"></path>
+                      <path d="M0 249C15 249 73 261.945 103 278.945C133 295.945 133 295.945 195 339.945C273.497 395.652 329 377 420 377" stroke-width="90"></path>
+                      <path d="M508 376.445L354.25 287.678L354.25 465.213L508 376.445Z"></path>
+                    </g>
+                    <title>OpenRouter</title>
+                    <defs>
+                      <clipPath id="clip0_205_3">
+                        <rect width="512" height="512" fill="white"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  OpenRouter
+                </span>
+              </span>
+            </button>
+          </a>
+          <div tabindex="-1" class="flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground" cmdk-root="">
+            <label cmdk-label="" for="radix-_r_a_" id="radix-_r_9_" style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label>
+            <div role="combobox" aria-controls="search-command-list" aria-expanded="false" class="flex items-center gap-2 rounded-md h-9 w-0 ring-ring md:w-64 transition-colors relative bg-slate-3 text-slate-11 focus-within:bg-slate-4 focus-within:text-slate-12" type="button" aria-haspopup="dialog" data-state="closed">
+              <div class="flex items-center border-b px-3 w-full focus-visible:outline-none" cmdk-input-wrapper="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="mr-2 h-4 w-4 shrink-0 opacity-50"><path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd"></path></svg>
+                <input class="flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50" placeholder="Search" cmdk-input="" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="radix-_r_8_" aria-labelledby="radix-_r_9_" id="radix-_r_a_" type="text" value="">
+              </div>
+              <kbd class="flex items-center justify-center aspect-square h-4 w-4 p-1 pointer-events-none rounded-sm bg-border text-xs text-muted-foreground absolute right-3.5 transition-opacity duration-200">/</kbd>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:flex lg:gap-1 text-sm">
+          <a class="text-muted-foreground" href="/models">
+            <button class="inline-flex items-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 hover:bg-accent hover:text-accent-foreground border border-transparent h-9 rounded-md px-3 w-auto justify-center text-muted-foreground">Models</button>
+          </a>
+          <a class="text-muted-foreground" href="/chat">
+            <button class="inline-flex items-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 hover:bg-accent hover:text-accent-foreground border border-transparent h-9 rounded-md px-3 w-auto justify-center text-muted-foreground">Chat</button>
+          </a>
+          <a class="text-muted-foreground" href="/rankings">
+            <button class="inline-flex items-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 hover:bg-accent hover:text-accent-foreground border border-transparent h-9 rounded-md px-3 w-auto justify-center text-muted-foreground">Rankings</button>
+          </a>
+          <a class="text-muted-foreground" href="/enterprise">
+            <button class="inline-flex items-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 hover:bg-accent hover:text-accent-foreground border border-transparent h-9 rounded-md px-3 w-auto justify-center text-muted-foreground">Enterprise</button>
+          </a>
+          <a href="/docs/quick-start" class="text-muted-foreground">
+            <button class="inline-flex items-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 hover:bg-accent hover:text-accent-foreground border border-transparent h-9 rounded-md px-3 w-auto justify-center text-muted-foreground">Docs</button>
+          </a>
+          <div class="flex w-24 justify-end">
+            <button class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 border border-input bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground px-3 h-full w-full rounded-full" component="SignInButton">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <!-- Trimmed for brevity in repo -->
+  </main>
+  </main>
+</body>
+</html>
